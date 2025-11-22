@@ -38,7 +38,7 @@ public interface OsobaRepository extends JpaRepository<Osoba, Long> {
     /**
      * Vyhledá všechny osoby, jejichž příjmení začíná na uvedený text.
      */
-    Page<Osoba> findByPrijmeniStartingWithIgnoreCase(String prijmeni, Pageable pageable);
+    Page<Osoba> findByPrijmeniStartingWithIgnoreCaseOrderByPrijmeni(String prijmeni, Pageable pageable);
 
     /**
      * Vyhledá všechny osoby, které se narodily v rozmezí zadaných let.
